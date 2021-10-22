@@ -18,9 +18,9 @@ namespace GadgetMachine
         }
         private RGB keyboardColor;
         private byte coresAmount;
-        private short HDDCapacity;
+        private byte HDDCapacity;
 
-        public Notebook(short width, short height, byte red, byte green, byte blue, byte coresAmount, short HDDCapacity) : base(width, height)
+        public Notebook(short width, short height, byte red, byte green, byte blue, byte coresAmount, byte HDDCapacity) : base(width, height)
         {
             keyboardColor.red = red;
             keyboardColor.green = green;
@@ -47,10 +47,10 @@ namespace GadgetMachine
         public override string GetInfo()
         {
             string info = "Ноутбук:";
-            info += String.Format("Разрешение экрана: {0}x{1}", display.width, display.height);
+            info += String.Format("Разрешение экрана: {0}x{1} px", display.width, display.height);
             info += "\nПодсветка клавиатуры:";
             info += String.Format("\nЧисло ядер: {0}", coresAmount);
-            info += String.Format("\nОбъем жесткого диска {0}", HDDCapacity);
+            info += String.Format("\nОбъем жесткого диска {0} GB", HDDCapacity);
 
             return info;
         }
