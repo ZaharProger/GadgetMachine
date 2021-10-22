@@ -10,12 +10,12 @@ namespace GadgetMachine
     abstract class Gadget
     {
         //Структура дисплея: ширина и высота
-        struct Display
+        protected struct Display
         {
             public short width;
             public short height;
         }
-        Display display;
+        protected Display display;
 
         protected Gadget(short width, short height)
         {
