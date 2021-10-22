@@ -17,6 +17,8 @@ namespace GadgetMachine
         }
         protected Display display;
 
+        protected Gadget()
+        {}
         protected Gadget(short width, short height)
         {
             display.width = width;
