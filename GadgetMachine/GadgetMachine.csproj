@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Decorator.cs" />
+    <Compile Include="FingerPrintSmartphone.cs" />
     <Compile Include="Gadget.cs" />
     <Compile Include="GameNotebook.cs" />
     <Compile Include="infoWindow.cs">
@@ -61,6 +62,7 @@
     <Compile Include="MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="NFCSmartphone.cs" />
     <Compile Include="Notebook.cs" />
     <Compile Include="OfficeNotebook.cs" />
     <Compile Include="Program.cs" />
