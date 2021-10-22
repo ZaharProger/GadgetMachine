@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 namespace GadgetMachine
 {
     //Декоратор
-    abstract class Decorator : Gadget
+    abstract class Decorator<T> : Gadget
     {
-        private Gadget gadget;
+        protected T gadget;
         
-        protected Decorator(Gadget gadget)
+        protected Decorator(T gadget)
         {
             this.gadget = gadget;
         }

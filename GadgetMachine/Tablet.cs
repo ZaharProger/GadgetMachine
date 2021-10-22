@@ -12,7 +12,7 @@ namespace GadgetMachine
         private bool hasCam;
         private short dpi;
 
-        public Tablet(short width, short height, bool hasCam, short dpi) : base(width, height)
+        public Tablet(short width, short height, bool hasCam, short dpi) : base(width, height, "Планшет")
         {
             this.hasCam = hasCam;
             this.dpi = dpi;
@@ -20,7 +20,7 @@ namespace GadgetMachine
 
         public override string GetInfo()
         {
-            string info = "Планшет:";
+            string info = type;
             info += String.Format("\nРазрешение экрана: {0}x{1} px", display.width, display.height);
             if (hasCam)
                 info += "\nНаличие камеры: Да";

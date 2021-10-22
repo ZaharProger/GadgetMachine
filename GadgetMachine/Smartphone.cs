@@ -13,7 +13,7 @@ namespace GadgetMachine
         private byte cameraMpx;
         private short batteryPower;
 
-        public Smartphone(short width, short height, byte SIMslotsAmount, byte cameraMpx, short batteryPower) : base(width, height)
+        public Smartphone(short width, short height, byte SIMslotsAmount, byte cameraMpx, short batteryPower) : base(width, height, "Смартфон")
         {
             this.SIMslotsAmount = SIMslotsAmount;
             this.cameraMpx = cameraMpx;
@@ -22,7 +22,7 @@ namespace GadgetMachine
 
         public override string GetInfo()
         {
-            string info = "Смартфон:";
+            string info = type;
             info += String.Format("\nРазрешение экрана: {0}x{1} px", display.width, display.height);
             info += String.Format("\nЧисло слотов под SIM: {0}", SIMslotsAmount);
             info += String.Format("\nРазрешение камеры: {0} Mpx", cameraMpx);

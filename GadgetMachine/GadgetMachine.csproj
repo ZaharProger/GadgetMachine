@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Decorator.cs" />
     <Compile Include="Gadget.cs" />
+    <Compile Include="GameNotebook.cs" />
     <Compile Include="infoWindow.cs">
       <SubType>Form</SubType>
     </Compile>

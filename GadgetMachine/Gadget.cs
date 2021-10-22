@@ -16,15 +16,20 @@ namespace GadgetMachine
             public short height;
         }
         protected Display display;
-
+        protected string type;
         protected Gadget()
         {}
-        protected Gadget(short width, short height)
+        protected Gadget(short width, short height, string type)
         {
             display.width = width;
             display.height = height;
+            this.type = type;
         }
 
+        public void SetType(string type)
+        {
+            this.type = type;
+        }
         public abstract string GetInfo();
     }
 }
