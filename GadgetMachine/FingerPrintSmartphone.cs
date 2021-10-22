@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace GadgetMachine
 {
     //Декоратор смартфона в смартфон с отпечатком пальца
-    class FingerPrintSmartphone : Decorator<Smartphone>
+    class FingerPrintSmartphone : Decorator
     {
         public FingerPrintSmartphone(Smartphone smartphone) : base (smartphone)
         {}

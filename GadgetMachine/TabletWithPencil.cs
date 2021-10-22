@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace GadgetMachine
 {
     //Декоратор планшета со стилусом
-    class TabletWithPencil : Decorator<Tablet>
+    class TabletWithPencil : Decorator
     {
         public TabletWithPencil(Tablet tablet) : base(tablet)
         { }

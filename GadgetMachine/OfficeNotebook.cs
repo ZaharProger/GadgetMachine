@@ -7,22 +7,21 @@ using System.Threading.Tasks;
 namespace GadgetMachine
 {
     //Декоратор ноутбука в офисный
-    class OfficeNotebook : Decorator<Notebook>
+    class OfficeNotebook : Decorator
     {
         private string GPU;
         public OfficeNotebook(Notebook notebook) : base(notebook)
         {
+            notebook.SetType("Офисный ноутбук");
+            notebook.SetCoresAmount((byte)(notebook.GetCoresAmount() / 2));
+            notebook.SetHDDCapacity((byte)(notebook.GetHDDCapacity() / 2));
+            notebook.SetCPUFrequency((byte)(notebook.GetCPUFrequency() / 2));
+            notebook.SetRAMCapacity((byte)(notebook.GetRAMCapacity() / 2));
             GPU = "GT 730M";
         }
 
         public override string GetInfo()
-        {
-            gadget.SetType("Офисный ноутбук");
-            gadget.SetCoresAmount((byte)(gadget.GetCoresAmount() / 2));
-            gadget.SetHDDCapacity((byte)(gadget.GetHDDCapacity() / 2));
-            gadget.SetCPUFrequency((byte)(gadget.GetCPUFrequency() / 2));
-            gadget.SetRAMCapacity((byte)(gadget.GetRAMCapacity() / 2));
-
+        {          
             return gadget.GetInfo() + "\nВидеокарта: " + GPU;
         }
     }

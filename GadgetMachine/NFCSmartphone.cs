@@ -9,7 +9,7 @@ namespace GadgetMachine
     class NFCSmartphone
     {
         //Декоратор смартфона в смартфон с NFC
-        class FingerPrintSmartphone : Decorator<Smartphone>
+        class FingerPrintSmartphone : Decorator
         {
             public FingerPrintSmartphone(Smartphone smartphone) : base(smartphone)
             { }
