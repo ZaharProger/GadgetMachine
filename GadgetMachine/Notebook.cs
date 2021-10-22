@@ -47,7 +47,7 @@ namespace GadgetMachine
         public override string GetInfo()
         {
             string info = "Ноутбук:";
-            info += String.Format("Разрешение экрана: {0}x{1} px", display.width, display.height);
+            info += String.Format("\nРазрешение экрана: {0}x{1} px", display.width, display.height);
             info += "\nПодсветка клавиатуры:";
             info += String.Format("\nЧисло ядер: {0}", coresAmount);
             info += String.Format("\nОбъем жесткого диска {0} GB", HDDCapacity);
