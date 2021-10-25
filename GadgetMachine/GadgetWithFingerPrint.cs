@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace GadgetMachine
 {
-    //Декоратор смартфона в смартфон с отпечатком пальца
-    class FingerPrintSmartphone : Decorator
+    //Декоратор Сканер отпечатка пальца
+    class GadgetWithFingerPrint : Decorator
     {
-        public FingerPrintSmartphone(Smartphone smartphone) : base (smartphone)
-        {}
+        public GadgetWithFingerPrint(Gadget gadget) : base(gadget)
+        { }
 
         public override string GetInfo()
         {

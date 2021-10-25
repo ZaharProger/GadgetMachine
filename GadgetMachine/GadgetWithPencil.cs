@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace GadgetMachine
 {
-    //Декоратор планшета со стилусом
-    class TabletWithPencil : Decorator
+    //Декоратор Стилус
+    class GadgetWithPencil : Decorator
     {
-        public TabletWithPencil(Tablet tablet) : base(tablet)
+        public GadgetWithPencil(Gadget gadget) : base(gadget)
         { }
 
         public override string GetInfo()
