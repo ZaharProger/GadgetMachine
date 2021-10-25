@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace GadgetMachine
 {
     //Планшет
+    [Serializable]
     class Tablet : Gadget
     {
         private bool hasCam;

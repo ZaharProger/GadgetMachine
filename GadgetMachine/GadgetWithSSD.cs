@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace GadgetMachine
 {
     //Декоратор SSD
+    [Serializable]
     class GadgetWithSSD : Decorator
     {
         public GadgetWithSSD(Gadget gadget) : base(gadget) 

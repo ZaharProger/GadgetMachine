@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace GadgetMachine
 {
     //Декоратор Стилус
+    [Serializable]
     class GadgetWithPencil : Decorator
     {
         public GadgetWithPencil(Gadget gadget) : base(gadget)

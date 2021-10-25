@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace GadgetMachine
 {
     //Ноутбук
+    [Serializable]
     class Notebook : Gadget
     {
         //Структура цвета
@@ -48,46 +49,6 @@ namespace GadgetMachine
         public byte GetBlue()
         {
             return keyboardColor.blue;
-        }
-
-        public void SetCoresAmount(byte coresAmount)
-        {
-            this.coresAmount = coresAmount;
-        }
-
-        public void SetHDDCapacity(byte HDDCapacity)
-        {
-            this.HDDCapacity = HDDCapacity;
-        }
-
-        public void SetCPUFrequency(double CPUFrequency)
-        {
-            this.CPUFrequency = CPUFrequency;
-        }
-
-        public void SetRAMCapacity(byte RAMCapacity)
-        {
-            this.RAMCapacity = RAMCapacity;
-        }
-
-        public byte GetCoresAmount()
-        {
-            return coresAmount;
-        }
-
-        public byte GetHDDCapacity()
-        {
-            return HDDCapacity;
-        }
-
-        public double GetCPUFrequency()
-        {
-            return CPUFrequency;
-        }
-
-        public byte GetRAMCapacity()
-        {
-            return RAMCapacity;
         }
 
         public override string GetInfo()

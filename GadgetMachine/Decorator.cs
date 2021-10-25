@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace GadgetMachine
 {
     //Декоратор
+    [Serializable]
     abstract class Decorator : Gadget
     {
         protected Gadget gadget;

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace GadgetMachine
 {
     //Смартфон
+    [Serializable]
     class Smartphone : Gadget
     {
         private byte SIMslotsAmount;

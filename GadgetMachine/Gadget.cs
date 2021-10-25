@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace GadgetMachine
 {
     //Класс гаджетов
+    [Serializable]
     abstract class Gadget
     {
         protected static Random dataGenerator;
@@ -36,6 +37,12 @@ namespace GadgetMachine
         {
             this.type = type;
         }
+
+        public string getType()
+        {
+            return type;
+        }
+
         public abstract string GetInfo();
     }
 }
