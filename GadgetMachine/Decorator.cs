@@ -15,5 +15,10 @@ namespace GadgetMachine
         {
             this.gadget = gadget;
         }
+
+        public Gadget GetGadget()
+        {
+            return gadget;
+        }
     }
 }

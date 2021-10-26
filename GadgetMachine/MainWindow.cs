@@ -12,9 +12,11 @@ namespace GadgetMachine
 {
     public partial class MainWindow : Form
     {
+        private List<Gadget> gadgets;
         public MainWindow()
         {
             InitializeComponent();
+            gadgets = new List<Gadget>();
         }
 
         //Закрытие окна клавишей Escape
@@ -30,6 +32,12 @@ namespace GadgetMachine
             Hide();
             infoWindow window = new infoWindow();
             window.Show();
+        }
+
+        //Заполнение автомата
+        private void fillButton_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

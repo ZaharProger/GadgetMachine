@@ -170,6 +170,7 @@ namespace GadgetMachine
             this.fillButton.TabIndex = 11;
             this.fillButton.Text = "Заполнить";
             this.fillButton.UseVisualStyleBackColor = false;
+            this.fillButton.Click += new System.EventHandler(this.fillButton_Click);
             // 
             // showButton
             // 

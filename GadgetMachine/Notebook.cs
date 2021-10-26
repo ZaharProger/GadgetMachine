@@ -21,15 +21,18 @@ namespace GadgetMachine
         private byte HDDCapacity;
         private double CPUFrequency;
         private byte RAMCapacity;
-        public Notebook(short width, short height, byte red, byte green, byte blue, byte coresAmount, byte HDDCapacity, double CPUFrequency, byte RAMCapacity) : base(width, height, "Ноутбук")
+        public Notebook()
         {
-            keyboardColor.red = red;
-            keyboardColor.green = green;
-            keyboardColor.blue = blue;
-            this.coresAmount = coresAmount;
-            this.HDDCapacity = HDDCapacity;
-            this.CPUFrequency = CPUFrequency;
-            this.RAMCapacity = RAMCapacity;
+            display.width = (short)dataGenerator.Next(1000, 2181);
+            display.height = (short)dataGenerator.Next(1000, 2181);
+            type = "Ноутбук";
+            keyboardColor.red = (byte)dataGenerator.Next(0, 256);
+            keyboardColor.green = (byte)dataGenerator.Next(0, 256);
+            keyboardColor.blue = (byte)dataGenerator.Next(0, 256);
+            coresAmount = (byte)dataGenerator.Next(2, 9);
+            HDDCapacity = (byte)dataGenerator.Next(1, 2049);
+            CPUFrequency = dataGenerator.NextDouble() + dataGenerator.Next(1, 5);
+            RAMCapacity = (byte)dataGenerator.Next(1, 129);
         }
 
         public byte GetRed()
@@ -94,7 +97,7 @@ namespace GadgetMachine
             info += "\nПодсветка клавиатуры:";
             info += String.Format("\nЧисло ядер: {0}", coresAmount);
             info += String.Format("\nОбъем жесткого диска {0} GB", HDDCapacity);
-            info += String.Format("\nЧастота процессора: {0} MHz", CPUFrequency);
+            info += String.Format("\nЧастота процессора: {0} GHz", CPUFrequency);
             info += String.Format("\nОбъем оперативной памяти: {0} GB", RAMCapacity);
 
             return info;

@@ -13,11 +13,14 @@ namespace GadgetMachine
         private byte cameraMpx;
         private short batteryPower;
 
-        public Smartphone(short width, short height, byte SIMslotsAmount, byte cameraMpx, short batteryPower) : base(width, height, "Смартфон")
+        public Smartphone()
         {
-            this.SIMslotsAmount = SIMslotsAmount;
-            this.cameraMpx = cameraMpx;
-            this.batteryPower = batteryPower;
+            display.width = (short)dataGenerator.Next(1000, 2181);
+            display.height = (short)dataGenerator.Next(1000, 2181);
+            type = "Смартфон";
+            SIMslotsAmount = (byte)dataGenerator.Next(1, 4);
+            cameraMpx = (byte)dataGenerator.Next(1, 21);
+            batteryPower = (short)dataGenerator.Next(1000, 5001);
         }
 
         public override string GetInfo()
