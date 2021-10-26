@@ -51,11 +51,11 @@ namespace GadgetMachine
             this.gadgetInfoField.BackColor = System.Drawing.Color.AliceBlue;
             this.gadgetInfoField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.gadgetInfoField.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.gadgetInfoField.Location = new System.Drawing.Point(250, 93);
-            this.gadgetInfoField.Margin = new System.Windows.Forms.Padding(2);
+            this.gadgetInfoField.Location = new System.Drawing.Point(262, 114);
+            this.gadgetInfoField.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gadgetInfoField.Name = "gadgetInfoField";
             this.gadgetInfoField.ReadOnly = true;
-            this.gadgetInfoField.Size = new System.Drawing.Size(449, 223);
+            this.gadgetInfoField.Size = new System.Drawing.Size(668, 274);
             this.gadgetInfoField.TabIndex = 0;
             this.gadgetInfoField.Text = "";
             // 
@@ -64,10 +64,9 @@ namespace GadgetMachine
             this.notebookAmount.BackColor = System.Drawing.Color.AliceBlue;
             this.notebookAmount.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.notebookAmount.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.notebookAmount.Location = new System.Drawing.Point(250, 16);
-            this.notebookAmount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.notebookAmount.Location = new System.Drawing.Point(262, 19);
             this.notebookAmount.Name = "notebookAmount";
-            this.notebookAmount.Size = new System.Drawing.Size(146, 37);
+            this.notebookAmount.Size = new System.Drawing.Size(195, 46);
             this.notebookAmount.TabIndex = 2;
             this.notebookAmount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -76,10 +75,9 @@ namespace GadgetMachine
             this.tabletAmount.BackColor = System.Drawing.Color.AliceBlue;
             this.tabletAmount.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabletAmount.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tabletAmount.Location = new System.Drawing.Point(400, 16);
-            this.tabletAmount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.tabletAmount.Location = new System.Drawing.Point(498, 19);
             this.tabletAmount.Name = "tabletAmount";
-            this.tabletAmount.Size = new System.Drawing.Size(146, 37);
+            this.tabletAmount.Size = new System.Drawing.Size(195, 46);
             this.tabletAmount.TabIndex = 3;
             this.tabletAmount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -88,10 +86,9 @@ namespace GadgetMachine
             this.smartphoneAmount.BackColor = System.Drawing.Color.AliceBlue;
             this.smartphoneAmount.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.smartphoneAmount.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.smartphoneAmount.Location = new System.Drawing.Point(551, 16);
-            this.smartphoneAmount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.smartphoneAmount.Location = new System.Drawing.Point(735, 20);
             this.smartphoneAmount.Name = "smartphoneAmount";
-            this.smartphoneAmount.Size = new System.Drawing.Size(146, 37);
+            this.smartphoneAmount.Size = new System.Drawing.Size(195, 46);
             this.smartphoneAmount.TabIndex = 4;
             this.smartphoneAmount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -99,10 +96,9 @@ namespace GadgetMachine
             // 
             this.notebookLabel.BackColor = System.Drawing.Color.LightSteelBlue;
             this.notebookLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.notebookLabel.Location = new System.Drawing.Point(250, 61);
-            this.notebookLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.notebookLabel.Location = new System.Drawing.Point(262, 74);
             this.notebookLabel.Name = "notebookLabel";
-            this.notebookLabel.Size = new System.Drawing.Size(146, 24);
+            this.notebookLabel.Size = new System.Drawing.Size(195, 30);
             this.notebookLabel.TabIndex = 5;
             this.notebookLabel.Text = "ноутбуки";
             this.notebookLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -111,10 +107,9 @@ namespace GadgetMachine
             // 
             this.tabletLabel.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tabletLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tabletLabel.Location = new System.Drawing.Point(400, 61);
-            this.tabletLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.tabletLabel.Location = new System.Drawing.Point(498, 74);
             this.tabletLabel.Name = "tabletLabel";
-            this.tabletLabel.Size = new System.Drawing.Size(146, 24);
+            this.tabletLabel.Size = new System.Drawing.Size(195, 30);
             this.tabletLabel.TabIndex = 6;
             this.tabletLabel.Text = "планшеты";
             this.tabletLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -123,10 +118,9 @@ namespace GadgetMachine
             // 
             this.smartphoneLabel.BackColor = System.Drawing.Color.LightSteelBlue;
             this.smartphoneLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.smartphoneLabel.Location = new System.Drawing.Point(551, 61);
-            this.smartphoneLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.smartphoneLabel.Location = new System.Drawing.Point(735, 75);
             this.smartphoneLabel.Name = "smartphoneLabel";
-            this.smartphoneLabel.Size = new System.Drawing.Size(146, 24);
+            this.smartphoneLabel.Size = new System.Drawing.Size(195, 30);
             this.smartphoneLabel.TabIndex = 7;
             this.smartphoneLabel.Text = "смартфоны";
             this.smartphoneLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -135,10 +129,10 @@ namespace GadgetMachine
             // 
             this.gadgetPicture.BackColor = System.Drawing.Color.AliceBlue;
             this.gadgetPicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.gadgetPicture.Location = new System.Drawing.Point(551, 105);
-            this.gadgetPicture.Margin = new System.Windows.Forms.Padding(2);
+            this.gadgetPicture.Location = new System.Drawing.Point(711, 129);
+            this.gadgetPicture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gadgetPicture.Name = "gadgetPicture";
-            this.gadgetPicture.Size = new System.Drawing.Size(137, 164);
+            this.gadgetPicture.Size = new System.Drawing.Size(206, 245);
             this.gadgetPicture.TabIndex = 8;
             this.gadgetPicture.TabStop = false;
             // 
@@ -147,11 +141,11 @@ namespace GadgetMachine
             this.queueField.BackColor = System.Drawing.Color.AliceBlue;
             this.queueField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.queueField.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.queueField.Location = new System.Drawing.Point(11, 61);
-            this.queueField.Margin = new System.Windows.Forms.Padding(2);
+            this.queueField.Location = new System.Drawing.Point(15, 75);
+            this.queueField.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.queueField.Name = "queueField";
             this.queueField.ReadOnly = true;
-            this.queueField.Size = new System.Drawing.Size(161, 255);
+            this.queueField.Size = new System.Drawing.Size(213, 313);
             this.queueField.TabIndex = 9;
             this.queueField.Text = "";
             // 
@@ -159,10 +153,9 @@ namespace GadgetMachine
             // 
             this.queueLabel.BackColor = System.Drawing.Color.LightSteelBlue;
             this.queueLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.queueLabel.Location = new System.Drawing.Point(11, 22);
-            this.queueLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.queueLabel.Location = new System.Drawing.Point(15, 27);
             this.queueLabel.Name = "queueLabel";
-            this.queueLabel.Size = new System.Drawing.Size(161, 24);
+            this.queueLabel.Size = new System.Drawing.Size(215, 30);
             this.queueLabel.TabIndex = 10;
             this.queueLabel.Text = "Очередь";
             this.queueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -175,10 +168,10 @@ namespace GadgetMachine
             this.fillButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.fillButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fillButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.fillButton.Location = new System.Drawing.Point(250, 328);
-            this.fillButton.Margin = new System.Windows.Forms.Padding(2);
+            this.fillButton.Location = new System.Drawing.Point(262, 404);
+            this.fillButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fillButton.Name = "fillButton";
-            this.fillButton.Size = new System.Drawing.Size(146, 30);
+            this.fillButton.Size = new System.Drawing.Size(195, 37);
             this.fillButton.TabIndex = 11;
             this.fillButton.Text = "Заполнить";
             this.fillButton.UseVisualStyleBackColor = false;
@@ -192,10 +185,10 @@ namespace GadgetMachine
             this.showButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.showButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.showButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.showButton.Location = new System.Drawing.Point(400, 328);
-            this.showButton.Margin = new System.Windows.Forms.Padding(2);
+            this.showButton.Location = new System.Drawing.Point(498, 404);
+            this.showButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.showButton.Name = "showButton";
-            this.showButton.Size = new System.Drawing.Size(146, 30);
+            this.showButton.Size = new System.Drawing.Size(195, 37);
             this.showButton.TabIndex = 12;
             this.showButton.Text = "Выдать";
             this.showButton.UseVisualStyleBackColor = false;
@@ -209,10 +202,10 @@ namespace GadgetMachine
             this.infoButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.infoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.infoButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.infoButton.Location = new System.Drawing.Point(551, 328);
-            this.infoButton.Margin = new System.Windows.Forms.Padding(2);
+            this.infoButton.Location = new System.Drawing.Point(735, 404);
+            this.infoButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.infoButton.Name = "infoButton";
-            this.infoButton.Size = new System.Drawing.Size(146, 30);
+            this.infoButton.Size = new System.Drawing.Size(195, 37);
             this.infoButton.TabIndex = 13;
             this.infoButton.Text = "О программе";
             this.infoButton.UseVisualStyleBackColor = false;
@@ -226,9 +219,10 @@ namespace GadgetMachine
             this.clearButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clearButton.Location = new System.Drawing.Point(11, 328);
+            this.clearButton.Location = new System.Drawing.Point(15, 404);
+            this.clearButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(161, 30);
+            this.clearButton.Size = new System.Drawing.Size(215, 37);
             this.clearButton.TabIndex = 14;
             this.clearButton.Text = "Очистить";
             this.clearButton.UseVisualStyleBackColor = false;
@@ -236,10 +230,10 @@ namespace GadgetMachine
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(713, 368);
+            this.ClientSize = new System.Drawing.Size(951, 453);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.infoButton);
             this.Controls.Add(this.showButton);
@@ -255,7 +249,7 @@ namespace GadgetMachine
             this.Controls.Add(this.notebookAmount);
             this.Controls.Add(this.gadgetInfoField);
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GadgetMachine";

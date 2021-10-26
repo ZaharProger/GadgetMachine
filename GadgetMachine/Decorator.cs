@@ -12,7 +12,7 @@ namespace GadgetMachine
     {
         protected Gadget gadget;
         
-        protected Decorator(Gadget gadget)
+        protected Decorator(Gadget gadget) : base(gadget)
         {
             this.gadget = gadget;
         }

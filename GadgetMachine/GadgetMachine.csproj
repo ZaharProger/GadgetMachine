@@ -58,6 +58,7 @@
     <Compile Include="infoWindow.Designer.cs">
       <DependentUpon>infoWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Machine.cs" />
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>

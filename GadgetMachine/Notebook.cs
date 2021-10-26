@@ -22,17 +22,15 @@ namespace GadgetMachine
         private byte HDDCapacity;
         private double CPUFrequency;
         private byte RAMCapacity;
-        public Notebook()
+        public Notebook() : base()
         {
-            display.width = (short)dataGenerator.Next(1000, 2181);
-            display.height = (short)dataGenerator.Next(1000, 2181);
             type = "Ноутбук";
             keyboardColor.red = (byte)dataGenerator.Next(0, 256);
             keyboardColor.green = (byte)dataGenerator.Next(0, 256);
             keyboardColor.blue = (byte)dataGenerator.Next(0, 256);
             coresAmount = (byte)dataGenerator.Next(2, 9);
             HDDCapacity = (byte)dataGenerator.Next(1, 2049);
-            CPUFrequency = dataGenerator.NextDouble() + dataGenerator.Next(1, 5);
+            CPUFrequency = Math.Round(dataGenerator.NextDouble() + dataGenerator.Next(1, 5), 1);
             RAMCapacity = (byte)dataGenerator.Next(1, 129);
         }
 

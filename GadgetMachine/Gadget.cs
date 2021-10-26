@@ -10,7 +10,7 @@ namespace GadgetMachine
     [Serializable]
     abstract class Gadget
     {
-        protected static Random dataGenerator;
+        protected static Random dataGenerator = new Random();
         //Структура дисплея: ширина и высота
         protected struct Display
         {
@@ -21,16 +21,16 @@ namespace GadgetMachine
         protected string type;
         protected Gadget()
         {
-            dataGenerator = new Random();
             display.width = (short)dataGenerator.Next(1000, 2181);
             display.height = (short)dataGenerator.Next(1000, 2181);
             type = "Гаджет";
         }
-        protected Gadget(short width, short height, string type)
+
+        protected Gadget(Gadget gadget)
         {
-            display.width = width;
-            display.height = height;
-            this.type = type;
+            display.width = gadget.display.width;
+            display.height = gadget.display.height;
+            type = gadget.type;
         }
 
         public void SetType(string type)

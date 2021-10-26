@@ -13,12 +13,10 @@ namespace GadgetMachine
         private bool hasCam;
         private short dpi;
 
-        public Tablet()
+        public Tablet() : base()
         {
-            display.width = (short)dataGenerator.Next(1000, 2181);
-            display.height = (short)dataGenerator.Next(1000, 2181);
             type = "Планшет";
-            hasCam = (dataGenerator.Next(0, 9) % 2 == 0) ? true : false;
+            hasCam = dataGenerator.Next(0, 9) % 2 == 0;
             dpi = (short)dataGenerator.Next(80, 501);
         }
 

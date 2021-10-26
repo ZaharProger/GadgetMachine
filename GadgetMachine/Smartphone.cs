@@ -14,10 +14,8 @@ namespace GadgetMachine
         private byte cameraMpx;
         private short batteryPower;
 
-        public Smartphone()
+        public Smartphone() : base()
         {
-            display.width = (short)dataGenerator.Next(1000, 2181);
-            display.height = (short)dataGenerator.Next(1000, 2181);
             type = "Смартфон";
             SIMslotsAmount = (byte)dataGenerator.Next(1, 4);
             cameraMpx = (byte)dataGenerator.Next(1, 21);
