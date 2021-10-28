@@ -22,7 +22,7 @@ namespace GadgetMachine
             coresAmount = (byte)dataGenerator.Next(2, 9);
             HDDCapacity = (byte)dataGenerator.Next(1, 2049);
             CPUFrequency = Math.Round(dataGenerator.NextDouble() + dataGenerator.Next(1, 5), 1);
-            RAMCapacity = (byte)dataGenerator.Next(1, 129);
+            RAMCapacity = (byte)dataGenerator.Next(1, 33);
         }
 
         public override string GetInfo()
