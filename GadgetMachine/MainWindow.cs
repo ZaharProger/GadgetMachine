@@ -20,6 +20,9 @@ namespace GadgetMachine
             notebookAmount.Text = Properties.Settings.Default.notebooks;
             tabletAmount.Text = Properties.Settings.Default.tablets;
             smartphoneAmount.Text = Properties.Settings.Default.smartphones;
+            gadgetPicture.Hide();
+            keyboardColor.Hide();
+            colorLabel.Hide();
         }
 
         //Закрытие окна клавишей Escape
@@ -64,7 +67,9 @@ namespace GadgetMachine
             machine.Clear();
             queueField.Text = "";
             gadgetInfoField.Text = "";
-            gadgetPicture.BackColor = Color.AliceBlue;
+            colorLabel.Hide();
+            gadgetPicture.Hide();
+            keyboardColor.Hide();
         }
 
         //Сохранение данных
@@ -78,20 +83,43 @@ namespace GadgetMachine
             Gadget gadget = machine.GetElement();
             if (gadget != null)
             {
-                gadgetInfoField.Text = gadget.GetInfo();
-                try
+                if (gadget.getType().ToLower() == "ноутбук")
                 {
-                    Notebook notebook = (Notebook)gadget;
+                    gadgetInfoField.Text = gadget.GetInfo();
+                    string[] splittedInfo = gadgetInfoField.Text.Split(new char[] { ' ', '\n'}, StringSplitOptions.RemoveEmptyEntries);
+                    //Извлекаем цвет для установки в PictureBox
+                    var color = from data in splittedInfo
+                                let hexCode = new char[] {'a', 'b', 'c', 'd', 'e', 'f',
+                                                          '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' }
+                                where data.IndexOfAny(hexCode) != -1 && data.Length == 8
+                                select data;
                     
+                    //Удаляем информацию о цвете в текстовом поле                  
+                    gadgetInfoField.Text = gadgetInfoField.Text.Replace(color.ElementAt(0), "Да");
+
+                    //Визуализируем цвет, переводим из 16 ричной системы в RGB
+                    string[] convertedColor = new string[] { color.ElementAt(0).Substring(2, 2),
+                                                             color.ElementAt(0).Substring(4, 2),
+                                                             color.ElementAt(0).Substring(6)};
+                    RGB rgb = new HexToRGBConverter(convertedColor).Convert();
+                    keyboardColor.Show();
+                    colorLabel.Show();
+                    keyboardColor.BackColor = Color.FromArgb((int)rgb.GetRed(), (int)rgb.GetGreen(), (int)rgb.GetBlue());
                 }
-                catch (InvalidCastException)
-                { }
-                /*if (gadget is Notebook)
-                    gadgetPicture.Image = Image.FromFile(Environment.CurrentDirectory + "\\notebook.jpg");
-                else if (gadget is Tablet)
-                    gadgetPicture.Image = Image.FromFile(Environment.CurrentDirectory + "\\tablet.jpg");
+                else
+                {
+                    colorLabel.Hide();
+                    keyboardColor.Hide();
+                    gadgetInfoField.Text = gadget.GetInfo();
+                }
+
+                gadgetPicture.Show();
+                if (gadget.getType().ToLower() == "ноутбук")
+                    gadgetPicture.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + String.Format("\\Pics\\Notebooks\\notebook{0}.jpg", new Random().Next(0, 10)));
+                else if (gadget.getType().ToLower() == "планшет")
+                    gadgetPicture.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + String.Format("\\Pics\\Tablets\\tablet{0}.jpg", new Random().Next(0, 10)));
                 else 
-                    gadgetPicture.Image = Image.FromFile(Environment.CurrentDirectory + "\\smartphone.jpg");*/
+                    gadgetPicture.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + String.Format("\\Pics\\Smartphones\\smartphone{0}.jpg", new Random().Next(0, 10)));
                 string[] result = machine.VisualizeElements();
                 queueField.Text = result[0];
                 notebookAmount.Text = result[1];
@@ -102,6 +130,13 @@ namespace GadgetMachine
             {
                 MessageBox.Show("Автомат не заполнен!");
             }
+        }
+
+        //Копирование значения цвета при нажатии на него
+        private void keyboardColor_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(keyboardColor.BackColor.Name.Substring(2));
+            MessageBox.Show(String.Format("Значение цвета скопировано в буфер обмена!\nЗначение: {0}", Clipboard.GetText()));
         }
     }
 }

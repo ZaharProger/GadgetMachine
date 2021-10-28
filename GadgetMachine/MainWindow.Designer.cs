@@ -43,7 +43,10 @@ namespace GadgetMachine
             this.showButton = new System.Windows.Forms.Button();
             this.infoButton = new System.Windows.Forms.Button();
             this.clearButton = new System.Windows.Forms.Button();
+            this.keyboardColor = new System.Windows.Forms.PictureBox();
+            this.colorLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gadgetPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.keyboardColor)).BeginInit();
             this.SuspendLayout();
             // 
             // gadgetInfoField
@@ -55,7 +58,7 @@ namespace GadgetMachine
             this.gadgetInfoField.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gadgetInfoField.Name = "gadgetInfoField";
             this.gadgetInfoField.ReadOnly = true;
-            this.gadgetInfoField.Size = new System.Drawing.Size(668, 274);
+            this.gadgetInfoField.Size = new System.Drawing.Size(465, 274);
             this.gadgetInfoField.TabIndex = 0;
             this.gadgetInfoField.Text = "";
             // 
@@ -129,10 +132,11 @@ namespace GadgetMachine
             // 
             this.gadgetPicture.BackColor = System.Drawing.Color.AliceBlue;
             this.gadgetPicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.gadgetPicture.Location = new System.Drawing.Point(711, 129);
+            this.gadgetPicture.Location = new System.Drawing.Point(733, 114);
             this.gadgetPicture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gadgetPicture.Name = "gadgetPicture";
-            this.gadgetPicture.Size = new System.Drawing.Size(206, 245);
+            this.gadgetPicture.Size = new System.Drawing.Size(206, 228);
+            this.gadgetPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gadgetPicture.TabIndex = 8;
             this.gadgetPicture.TabStop = false;
             // 
@@ -168,7 +172,7 @@ namespace GadgetMachine
             this.fillButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.fillButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fillButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.fillButton.Location = new System.Drawing.Point(262, 404);
+            this.fillButton.Location = new System.Drawing.Point(262, 420);
             this.fillButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fillButton.Name = "fillButton";
             this.fillButton.Size = new System.Drawing.Size(195, 37);
@@ -185,7 +189,7 @@ namespace GadgetMachine
             this.showButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.showButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.showButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.showButton.Location = new System.Drawing.Point(498, 404);
+            this.showButton.Location = new System.Drawing.Point(498, 420);
             this.showButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.showButton.Name = "showButton";
             this.showButton.Size = new System.Drawing.Size(195, 37);
@@ -202,7 +206,7 @@ namespace GadgetMachine
             this.infoButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.infoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.infoButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.infoButton.Location = new System.Drawing.Point(735, 404);
+            this.infoButton.Location = new System.Drawing.Point(735, 420);
             this.infoButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.infoButton.Name = "infoButton";
             this.infoButton.Size = new System.Drawing.Size(195, 37);
@@ -219,8 +223,8 @@ namespace GadgetMachine
             this.clearButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clearButton.Location = new System.Drawing.Point(15, 404);
-            this.clearButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clearButton.Location = new System.Drawing.Point(15, 420);
+            this.clearButton.Margin = new System.Windows.Forms.Padding(4);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(215, 37);
             this.clearButton.TabIndex = 14;
@@ -228,12 +232,37 @@ namespace GadgetMachine
             this.clearButton.UseVisualStyleBackColor = false;
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
+            // keyboardColor
+            // 
+            this.keyboardColor.BackColor = System.Drawing.Color.AliceBlue;
+            this.keyboardColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.keyboardColor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.keyboardColor.Location = new System.Drawing.Point(857, 360);
+            this.keyboardColor.Name = "keyboardColor";
+            this.keyboardColor.Size = new System.Drawing.Size(73, 39);
+            this.keyboardColor.TabIndex = 15;
+            this.keyboardColor.TabStop = false;
+            this.keyboardColor.Click += new System.EventHandler(this.keyboardColor_Click);
+            // 
+            // colorLabel
+            // 
+            this.colorLabel.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.colorLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.colorLabel.Location = new System.Drawing.Point(735, 360);
+            this.colorLabel.Name = "colorLabel";
+            this.colorLabel.Size = new System.Drawing.Size(125, 39);
+            this.colorLabel.TabIndex = 16;
+            this.colorLabel.Text = "подсветка:";
+            this.colorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(951, 453);
+            this.ClientSize = new System.Drawing.Size(951, 480);
+            this.Controls.Add(this.colorLabel);
+            this.Controls.Add(this.keyboardColor);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.infoButton);
             this.Controls.Add(this.showButton);
@@ -256,6 +285,7 @@ namespace GadgetMachine
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainWindow_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.gadgetPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.keyboardColor)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -276,5 +306,7 @@ namespace GadgetMachine
         private System.Windows.Forms.Button showButton;
         private System.Windows.Forms.Button infoButton;
         private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.PictureBox keyboardColor;
+        private System.Windows.Forms.Label colorLabel;
     }
 }
