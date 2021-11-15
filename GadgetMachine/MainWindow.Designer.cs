@@ -282,7 +282,6 @@ namespace GadgetMachine
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GadgetMachine";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainWindow_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.gadgetPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.keyboardColor)).EndInit();
