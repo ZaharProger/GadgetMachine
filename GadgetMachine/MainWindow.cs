@@ -72,11 +72,6 @@ namespace GadgetMachine
             keyboardColor.Hide();
         }
 
-        //Сохранение данных
-        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
-        {
-        }
-
         //Выдача гаджета из автомата  
         private void showButton_Click(object sender, EventArgs e)
         {
